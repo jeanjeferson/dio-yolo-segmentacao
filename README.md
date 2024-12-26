@@ -27,7 +27,7 @@ dio-yolo-segmentacao/
 
 ## 🚀 Como Usar
 
-###1. Preparação do Ambiente
+## 1. Preparação do Ambiente
 ```bash
 # Clone o repositório
 git clone https://github.com/seu-usuario/dio-yolo-segmentacao.git
@@ -37,7 +37,7 @@ cd dio-yolo-segmentacao
 pip install -r requirements.txt
 ```
 
-### 2. 🏋️‍♂️ Treinamento do Modelo
+## 2. 🏋️‍♂️ Treinamento do Modelo
 
 Execute o notebook yolo-segmentacao.ipynb:
 
@@ -46,7 +46,7 @@ Configura o modelo YOLOv8
 Treina por 100 épocas
 Salva os melhores pesos
 
-###3. 🔍 Fazendo Predições
+## 3. 🔍 Fazendo Predições
 Usando o Notebook
 Abra yolo-predict.ipynb e siga as instruções para:
 
@@ -55,14 +55,20 @@ Fazer predições
 Visualizar resultados
 
 Usando Linha de Comando
-bashCopy# Para uma única imagem
+```bash
+# Para uma única imagem
 yolo predict model=runs/detect/train/weights/best.pt source=sua_imagem.jpg
+```
 
-# Para várias imagens em uma pasta
+## Para várias imagens em uma pasta
+```bash
 yolo predict model=runs/detect/train/weights/best.pt source=pasta_imagens/
+```
 
-# Para usar webcam
+## Para usar webcam
+```bash
 yolo predict model=runs/detect/train/weights/best.pt source=0
+```
 
 ## 📊 Resultados
 O modelo foi treinado com:
@@ -71,26 +77,27 @@ O modelo foi treinado com:
 225 imagens de validação
 227 imagens de teste
 
-💡 Dicas
+## 💡 Dicas
 
 Ajuste o threshold de confiança para melhorar as detecções:
-
+```bash
 pythonCopymodel.predict(source='imagem.jpg', conf=0.25)  # Padrão é 0.25
+```
 
-Para melhores resultados:
+## Para melhores resultados:
 
 Use imagens bem iluminadas
 Evite imagens muito distantes
 Mantenha resolução similar ao treino (640x640)
 
-🤝 Contribuições
+## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para:
 
 Reportar bugs
 Sugerir melhorias
 Enviar pull requests
 
-📝 Licença
+## 📝 Licença
 Este projeto está sob a licença MIT.
 
 Desenvolvido para o curso da DIO 🚀
