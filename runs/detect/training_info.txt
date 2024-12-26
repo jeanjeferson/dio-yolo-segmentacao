@@ -1,0 +1,6 @@
+model_base: yolov8n
+epochs: 5
+image_size: 640
+batch_size: 16
+classes: ['buffalo', 'elephant', 'rhino', 'zebra']
+dataset: African Wildlife
